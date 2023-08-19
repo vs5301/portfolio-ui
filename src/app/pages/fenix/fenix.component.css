@@ -1,0 +1,49 @@
+.left-panel, .right-panel{
+    height: 100vh;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card{
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation: mymove 3s ;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+  
+  
+@keyframes fadeInUp{
+    
+    0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+  }
+/* .left-panel{
+    background-color: red;
+}
+
+.right-panel{
+    background-color: black;
+} */

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfolio-ui-e7e5b": {
+      "hosting": {
+        "website-ui": [
+          "portfolio-ui-e7e5b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfolio-ui-e7e5b"
+  }
+}
