@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FenixComponent } from '../fenix/fenix.component';
 import { RCSComponent } from '../rcs/rcs.component';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -9,7 +11,16 @@ import { RCSComponent } from '../rcs/rcs.component';
 })
 export class ProjectsComponent implements OnInit{
 
-  constructor(){}
+  isMenuCollapsed: boolean = true
+
+  constructor(
+    private router: Router
+  ){
+    this.router.events.pipe(filter(x => x instanceof NavigationEnd))
+    .subscribe((value) => {
+      this.isMenuCollapsed = true
+    })
+  }
 
   ngOnInit(): void {
 

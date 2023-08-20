@@ -2,14 +2,15 @@
     <!-- Container wrapper -->
     <div class="container-fluid">
       <!-- Toggle button -->
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
+      <button class="navbar-toggler btn text-center text-light" type="button" data-bs-toggle="collapse" (click)="isMenuCollapsed = !isMenuCollapsed">
+        <span class="navbar-toggler-icon text-light"></span>
       </button>
   
       <!-- Collapsible wrapper -->
       <div
-        class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
-        <!-- Left links -->
+        class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent" [ngbCollapse]="isMenuCollapsed">
+        <div class="d-flex justify-content-center">
+           <!-- Left links -->
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link active text-white" aria-current="page" href="#"> Home </a>
@@ -25,8 +26,9 @@
           </li>
         </ul>
         <!-- Left links -->
+        </div>
       </div>
       <!-- Collapsible wrapper -->
     </div>
-    <!-- Container wrapper -->
+    <!-- Container wrapper -->  
   </nav>

@@ -40,7 +40,7 @@ body {
   border-right: 12px solid transparent;
   border-top: 12px solid #fff;
   border-bottom: 20px solid transparent;
-  left: 32px;
+  left: 30px;
   bottom: -24px;
 }
   
@@ -79,13 +79,36 @@ a{
 
 @keyframes fadeInDown{
   0% {
-  opacity: 0;
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
-100% {
-  opacity: 1;
-  -webkit-transform: none;
-  transform: none;
+
+@media(min-width: 320px) and (max-width: 370px){
+  .bubble{
+    width:280px;
+    text-align: center;
+    padding: 10px;
+  }
+  .bubble-bottom-left:before{
+    left: 40px;
+  }
 }
+
+@media(min-width: 371px) and (max-width: 420px){
+  .bubble{
+    width: 320px;
+  }
+}
+
+@media(min-width: 421px) and (max-width: 521px){
+  .bubble{
+    width: 380px;
+  }
 }
