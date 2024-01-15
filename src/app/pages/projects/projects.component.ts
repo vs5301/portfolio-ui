@@ -23,10 +23,12 @@ export class ProjectsComponent implements OnInit{
   }
 
   ngOnInit(): void {
-
+    this.detectComp("fenix")
   }
 
   comp: any
+  FenixComponent = FenixComponent
+  RCSComponent = RCSComponent
   
   detectComp(comp: any){
     // console.log(comp);
